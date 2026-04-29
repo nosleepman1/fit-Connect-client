@@ -1,0 +1,62 @@
+{
+  "expo": {
+    "name": "FitConnect",
+    "slug": "fitconnect",
+    "version": "1.0.0",
+    "scheme": "fitconnect",
+    "platforms": ["ios", "android", "web"],
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B0B0F"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "bundleIdentifier": "com.fitconnect.app",
+      "buildNumber": "1",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "FitConnect a besoin de votre caméra pour analyser vos mouvements en vidéo lors des Form Checks techniques et publier vos séances.",
+        "NSMicrophoneUsageDescription": "FitConnect a besoin de votre micro pour enregistrer vos notes vocales avec vos coachs et les audios de vos vidéos.",
+        "NSPhotoLibraryUsageDescription": "FitConnect a besoin d'accéder à vos photos pour personnaliser votre avatar et partager vos progrès sur le fil social."
+      }
+    },
+    "android": {
+      "package": "com.fitconnect.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B0B0F"
+      },
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "INTERNET"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash.png",
+          "backgroundColor": "#0B0B0F"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    }
+  }
+}
